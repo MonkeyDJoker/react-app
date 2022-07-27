@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {HelloMessage,Person,HelloMessageSimple, TypeName, NamePassword,NamePassword2} from './Home'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <HelloMessage />
+    <Person name ='jack'age='19' gender='male' />
+    <HelloMessageSimple />
+    <TypeName />
+    <NamePassword />
+    <NamePassword2/>
   </React.StrictMode>
 );
 
