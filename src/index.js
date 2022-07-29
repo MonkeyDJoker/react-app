@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {HelloMessage,Person,HelloMessageSimple, TypeName, NamePassword,NamePassword2} from './Home'
+import Header from './Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <TypeName />
     <NamePassword />
     <NamePassword2/>
+    <Header car ='BMW' girls = '200' />
   </React.StrictMode>
 );
 
