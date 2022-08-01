@@ -1,0 +1,11 @@
+.inputDiv{
+    position: relative;
+    height: 25px;
+    top: 5px;
+}
+.inputButton{
+    position: absolute;
+    right: 5px;
+    background-color: brown;
+    top: 1px;
+}

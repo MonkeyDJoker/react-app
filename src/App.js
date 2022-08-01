@@ -1,6 +1,6 @@
 import Header from './Header';
 import { HelloMessage,Person,HelloMessageSimple,TypeName,NamePassword,NamePassword2 } from './Home';
-
+import Todolist from './Todolist';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <NamePassword />
       <NamePassword2 />
       <Header car='BMW' girls='200' />
+      <Todolist/>
     </div>
   );
 }
