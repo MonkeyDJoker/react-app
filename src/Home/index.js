@@ -1,6 +1,5 @@
 import React from 'react';
-import './Home.css'
-
+import './index.css'
 
 class HelloMessage extends React.Component {
 

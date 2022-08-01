@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header';
+import { HelloMessage,Person,HelloMessageSimple,TypeName,NamePassword,NamePassword2 } from './Home';
+import Todolist from './Todolist';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelloMessage />
+      <Person name='jack' age='19' gender='male' />
+      <HelloMessageSimple />
+      <TypeName />
+      <NamePassword />
+      <NamePassword2 />
+      <Header car='BMW' girls='200' />
+      <Todolist/>
     </div>
   );
 }
