@@ -35,24 +35,34 @@ export default class Todolist extends Component {
         this.setState({ todos: newTask })
     }
 
-    deleteTask = (id)=>{
-        const {todos} = this.state
+    deleteTask = (id) => {
+        const { todos } = this.state
         const newTask = todos.filter(
-            (todo)=>{
+            (todo) => {
                 return todo.id !== id
             }
         )
-        this.setState({todos:newTask})
+        this.setState({ todos: newTask })
     }
 
-    totalCheck = (data) =>{
-        const {todos} = this.state
+    totalCheck = (data) => {
+        const { todos } = this.state
         const newTask = todos.map(
-            (todo)=>{
-                if(data === true)
-                    return {...todo,check:true}
+            (todo) => {
+                if (data === true)
+                    return { ...todo, check: true }
                 else
-                    return {...todo,check:false}
+                    return { ...todo, check: false }
+            }
+        )
+        this.setState({ todos: newTask })
+    }
+
+    deleteAllDone = () => {
+        const { todos } = this.state
+        const newTask = todos.filter(
+            (todo) => {
+                return todo.check !== true
             }
         )
         this.setState({todos:newTask})
@@ -63,7 +73,7 @@ export default class Todolist extends Component {
             <div className='todolist'>
                 <Header addTask={this.addTask} />
                 <List todos={this.state.todos} changeCheck={this.changeCheck} deleteTask={this.deleteTask} />
-                <Footer todos={this.state.todos} totalCheck={this.totalCheck} />
+                <Footer todos={this.state.todos} totalCheck={this.totalCheck} deleteAllDone={this.deleteAllDone} />
             </div>
         )
     }
