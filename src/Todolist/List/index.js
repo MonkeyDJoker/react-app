@@ -12,12 +12,12 @@ export default class List extends Component {
   }
 
   render() {
-    const { todos, changeCheck } = this.props
+    const { todos, changeCheck , deleteTask} = this.props
     return (
       <div className='todolistlist'>
         {
           todos.map((todo) => {
-            return <Item {...todo} key={todo.id} changeCheck={changeCheck} />
+            return <Item {...todo} key={todo.id} changeCheck={changeCheck} deleteTask={deleteTask} />
           })
         }
       </div>
